@@ -1,5 +1,6 @@
 ﻿using Pattern_2.Patterns.Decorator;
 using Pattern_2.Patterns.Decorator.Decorators;
+using Pattern_2.Patterns.Facade;
 using Pattern_2.Patterns.Observer;
 
 //Decorator
@@ -23,3 +24,14 @@ notificationService.subscribe(listener1);
 notificationService.subscribe(listener2);
 Console.WriteLine("\n");
 store.announce("This is an announcement.");
+
+Console.WriteLine("\n");
+
+
+//Facade
+
+User client  = new User();
+
+CryptoFacade cryptoFacade = new CryptoFacade();
+
+cryptoFacade.BuyCrypto(client, .1f, "BTC");
